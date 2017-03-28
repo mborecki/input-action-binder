@@ -31,5 +31,29 @@ describe('InputActionBinder', () => {
         });
     });
 
+    describe('simple binding', () => {
+        let IABinder : IAB;
+        let actionName = 'jump';
+        let input = 'CustomInputName-1';
+
+        beforeAll(() => {
+            IABinder = new IAB();
+
+            IABinder.addAction(actionName)
+                .bind(input);
+        });
+
+        it('should detect button signal', () => {
+            let mock = jest.fn();
+
+            IABinder.getAction(actionName).onOn(mock);
+
+            IABinder.tap(input);
+
+            expect(mock).toHaveBeenCalled();
+        });
+
+    });
+
 });
 
