@@ -3,30 +3,27 @@
   "version": "1.0.0",
   "description": "",
   "homepage": "",
-
   "main": "lib/index.js",
   "typings": "lib/typings/index.d.ts",
   "files": [
     "lib"
   ],
-
   "scripts": {
     "build": "sh ./scripts/build.sh",
     "test": "jest --notify --config=jest.conf.json"
   },
   "author": "mborecki",
-
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^19.2.2",
     "browserify": "^14.1.0",
+    "jest": "^19.0.2",
+    "ts-jest": "^19.0.1",
     "tsify": "^3.0.1",
     "typescript": "^2.2.1",
     "typings": "^2.1.0",
-    "watchify": "^3.9.0",
-    "jest": "^19.0.2",
-    "ts-jest": "^19.0.1"
+    "watchify": "^3.9.0"
   },
-
   "peerDependencies": {
     "Phaser": "latest"
   }
